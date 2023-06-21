@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 // testBed
 describe('App component',()=>{
@@ -12,7 +13,7 @@ describe('App component',()=>{
   let authService: AuthService;
   beforeEach(function(){
     TestBed.configureTestingModule({
-
+      imports:[HttpClientModule],
     })
    // create component and test fixture
     fixture = TestBed.createComponent(AppComponent);
